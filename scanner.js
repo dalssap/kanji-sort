@@ -192,6 +192,7 @@ async function processNotionPage(pageId, outputFolder) {
     fs.writeFileSync(outputPath, outputContent);
     console.log(`Results saved to ${outputPath}`);
     console.log(`Processed ${results.length} images from Notion page.`);
+    console.log(`JSON 파일 절대 경로: ${path.resolve(outputPath)}`);
   } catch (error) {
     console.error('노션 페이지 처리 중 오류 발생:', error);
   }
@@ -242,6 +243,7 @@ async function processImagesInFolder(folderPath) {
   fs.writeFileSync(outputPath, outputContent);
   console.log(`Results saved to ${outputPath}`);
   console.log(`Processed ${results.length} images.`);
+  console.log(`JSON 파일 절대 경로: ${path.resolve(outputPath)}`);
 }
 
 // 명령줄 인수 처리
